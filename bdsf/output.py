@@ -719,10 +719,11 @@ def make_ds9_str(img, glist, gnames, deconvolve=False, objtype='gaul', incl_empt
                     ') # point=cross width=2 text={' + src_name + '}\n'
             else:
                 # ds9 can't handle 1-D Gaussians, so make sure they are 2-D
-                if deconv[0] < 1.0/3600.0:
-                    deconv[0] = 1.0/3600.0
-                if deconv[1] < 1.0/3600.0:
-                    deconv[1] = 1.0/3600.0
+                # shrinking minumum size to 1 milliarcsecond
+                if deconv[0] < 1.0/3600000.0:
+                    deconv[0] = 1.0/3600000.0
+                if deconv[1] < 1.0/3600000.0:
+                    deconv[1] = 1.0/3600000.0
                 region = 'ellipse(' + str(ra) + ',' + str(dec) + ',' + \
                     str(deconv[0]*3600.0) + '",' + str(deconv[1]*3600.0) + \
                     '",' + str(deconv[2]+90.0) + ') # text={' + src_name + '}\n'
