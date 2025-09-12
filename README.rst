@@ -71,3 +71,8 @@ You will need to tell `setup.py` to use the same compiler for fortran as for C++
 
 .. image:: https://github.com/lofar-astron/PyBDSF/actions/workflows/ci.yml/badge.svg?branch=master
     :target: https://github.com/lofar-astron/PyBDSF/actions/workflows/ci.yml
+
+##############################
+FORK
+##############################
+Changed the minumum size of DS9 ellipses
