@@ -76,3 +76,4 @@ You will need to tell `setup.py` to use the same compiler for fortran as for C++
 FORK
 ##############################
 Changed the minumum size of DS9 ellipses
+Deleted the setup.py file
